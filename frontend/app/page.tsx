@@ -10,7 +10,7 @@ interface Mahasiswa {
   jurusan: string;
 }
 
-const API_URL = "http://localhost:7000/mahasiswa";
+const API_URL = "/api/mahasiswa";
 
 export default function Home() {
   const [mahasiswa, setMahasiswa] = useState<Mahasiswa[]>([]);

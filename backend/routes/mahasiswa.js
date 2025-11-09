@@ -4,13 +4,8 @@ import dotenv from "dotenv";
 
 dotenv.config(); 
 const router = express.Router();
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseKey) {
-  console.error("SUPABASE_URL atau SUPABASE_KEY tidak ditemukan di .env");
-  process.exit(1);
-}
+const supabaseUrl = process.env.SUPABASE_URL || 'https://yhutcyuqgdvkrxfphlgx.supabase.co';
+const supabaseKey = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlodXRjeXVxZ2R2a3J4ZnBobGd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIzNTU2ODUsImV4cCI6MjA3NzkzMTY4NX0.TBt5-4hC1uvBUFnIcyJjeHK9tVPu1TaU_VNjltGSGOs';
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
