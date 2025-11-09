@@ -7,3 +7,9 @@
 - [x] Run npm run dev to start the server (requires .env setup with Supabase credentials)
 - [ ] Update .env with real Supabase URL and anon key
 - [ ] Test CRUD endpoints once server is running
+
+# TODO for Running Backend and Frontend Together
+
+- [ ] Create root package.json with concurrent dev script
+- [ ] Install concurrently package
+- [ ] Run npm run dev to start both services
